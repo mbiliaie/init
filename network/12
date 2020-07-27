@@ -1,0 +1,2 @@
+#!/bin/sh
+ping -c1 -q -W1 10.51.1.253 && echo 'server with 10.51.1.253 IP is reachable' || echo 'server with 10.51.1.253 IP is NOT reachable'

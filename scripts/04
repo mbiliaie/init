@@ -1,0 +1,15 @@
+#!/bin/sh
+crontab -l > /home/user/rule 
+echo 'md5sum /etc/crontab > /home/user/current_state
+if ! cmp /home/user/current_state /home/user/basic_state  >/dev/null 2>&1 
+then
+echo "changes in /etc/crontab were found" | mail -s "crontab: changes!" root.debian.default@gmail.com | md5sum /etc/crontab > /home/user/basic_state
+rm /home/user/current_state
+else
+rm /home/user/current_state
+fi' > /home/user/script1.sh
+chmod 744 /home/user/script1.sh
+echo '0 12 * * * sh /home/user/script1.sh 2>&1' >> /home/user/rule
+crontab /home/user/rule
+rm /home/user/rule 
+md5sum /etc/crontab > /home/user/basic_state

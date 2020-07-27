@@ -1,0 +1,4 @@
+The device that links my local network and the outside world is the NAT server.
+It transforms my private IP (visible only in the local network!) into a public IP that is visible for the rest of the world.
+1  10.113.254.254 (10.113.254.254)  0.542 ms  0.281 ms  0.334 ms ==>> PRIVATE, unrecognisable
+2  178.214.196.33 (178.214.196.33)  0.484 ms  0.561 ms  0.545 ms ==>> PUBLIC, visible 

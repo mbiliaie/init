@@ -1,0 +1,1 @@
+cron is the daemon responsible for executing scheduled and recurring commands (every day, every week, etc.)

@@ -1,0 +1,2 @@
+#!/bin/sh
+ifconfig | grep 'mtu' | cut -d ':' -f1

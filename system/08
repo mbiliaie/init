@@ -1,0 +1,4 @@
+By default names of the files are id_rsa (/home/user/.ssh/id_rsa), id_rsa.pub (/home/user/.ssh/id_rsa.pub). 
+to check the content:
+cat /home/user/.ssh/id_rsa
+cat /home/user/.ssh/id_rsa.pub

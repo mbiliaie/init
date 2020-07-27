@@ -1,0 +1,2 @@
+#!/bin/sh
+netstat -nr | sed 23d |  grep 'default'

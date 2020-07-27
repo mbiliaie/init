@@ -1,0 +1,2 @@
+#!/bin/sh
+hostnamectl set-hostname example_new_system_name_here

@@ -1,0 +1,9 @@
+#!/bin/sh
+crontab -l > /home/user/rule
+sudo touch /var/log/update_script.log
+sudo chmod 777 /var/log/update_script.log
+echo 'sudo apt-get update && sudo apt-get upgrade >> /var/log/update_script.log' > /home/user/script.sh
+chmod 744 home/user/script.sh
+echo '0 4 * * 1 sh home/user/script.sh' >> rule 
+crontab /home/user/rule
+rm /home/user/rule
